@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Breb\source\repos\WpfApp1\WpfApp1\App.xaml
-6870155524
+14-1908259457
 
-11539930634
+191969807419
 121654848548
-DBServerSetWindow.xaml;DBupdateWindow.xaml;PageAddBook.xaml;PageMWBooksIndex.xaml;MainWindow.xaml;PageMWMemberLookup.xaml;
+DBServerSetWindow.xaml;DBupdateWindow.xaml;PageAddBook.xaml;PageAddCopy.xaml;PageAddMember.xaml;PageMWBooksIndex.xaml;MainWindow.xaml;PageMWMemberLookup.xaml;PageRemBook.xaml;PageRemCopy.xaml;PageRemMember.xaml;PageUpdAddress.xaml;PageUpdCondition.xaml;PageUpdPhone.xaml;
 
 False
 

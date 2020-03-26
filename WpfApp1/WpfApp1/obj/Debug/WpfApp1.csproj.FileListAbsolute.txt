@@ -1,6 +1,5 @@
 C:\Users\Breb\source\repos\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe
 C:\Users\Breb\source\repos\WpfApp1\WpfApp1\bin\Debug\WpfApp1.pdb
-C:\Users\Breb\source\repos\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csprojAssemblyReference.cache
 C:\Users\Breb\source\repos\WpfApp1\WpfApp1\obj\Debug\MainWindow.g.cs
 C:\Users\Breb\source\repos\WpfApp1\WpfApp1\obj\Debug\App.g.cs
 C:\Users\Breb\source\repos\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
@@ -22,3 +21,20 @@ C:\Users\Breb\source\repos\WpfApp1\WpfApp1\obj\Debug\PageMWBooksIndex.baml
 C:\Users\Breb\source\repos\WpfApp1\WpfApp1\obj\Debug\PageMWMemberLookup.baml
 C:\Users\Breb\source\repos\WpfApp1\WpfApp1\obj\Debug\DBServerSetWindow.g.cs
 C:\Users\Breb\source\repos\WpfApp1\WpfApp1\obj\Debug\DBServerSetWindow.baml
+C:\Users\Breb\source\repos\WpfApp1\WpfApp1\obj\Debug\PageAddCopy.g.cs
+C:\Users\Breb\source\repos\WpfApp1\WpfApp1\obj\Debug\PageAddMember.g.cs
+C:\Users\Breb\source\repos\WpfApp1\WpfApp1\obj\Debug\PageAddCopy.baml
+C:\Users\Breb\source\repos\WpfApp1\WpfApp1\obj\Debug\PageAddMember.baml
+C:\Users\Breb\source\repos\WpfApp1\WpfApp1\obj\Debug\PageRemBook.g.cs
+C:\Users\Breb\source\repos\WpfApp1\WpfApp1\obj\Debug\PageRemCopy.g.cs
+C:\Users\Breb\source\repos\WpfApp1\WpfApp1\obj\Debug\PageRemMember.g.cs
+C:\Users\Breb\source\repos\WpfApp1\WpfApp1\obj\Debug\PageRemBook.baml
+C:\Users\Breb\source\repos\WpfApp1\WpfApp1\obj\Debug\PageRemCopy.baml
+C:\Users\Breb\source\repos\WpfApp1\WpfApp1\obj\Debug\PageRemMember.baml
+C:\Users\Breb\source\repos\WpfApp1\WpfApp1\obj\Debug\PageUpdAddress.g.cs
+C:\Users\Breb\source\repos\WpfApp1\WpfApp1\obj\Debug\PageUpdCondition.g.cs
+C:\Users\Breb\source\repos\WpfApp1\WpfApp1\obj\Debug\PageUpdPhone.g.cs
+C:\Users\Breb\source\repos\WpfApp1\WpfApp1\obj\Debug\PageUpdAddress.baml
+C:\Users\Breb\source\repos\WpfApp1\WpfApp1\obj\Debug\PageUpdCondition.baml
+C:\Users\Breb\source\repos\WpfApp1\WpfApp1\obj\Debug\PageUpdPhone.baml
+C:\Users\Breb\source\repos\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csprojAssemblyReference.cache
