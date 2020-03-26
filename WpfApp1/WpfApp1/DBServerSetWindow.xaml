@@ -34,6 +34,7 @@
             Canvas.Left="243" Canvas.Top="67" 
             Width="75" Height="24"
             IsEnabled="False"
+            PreviewMouseDown="ok_PreviewMouseDown"
             Click="ok_Click"/>
 
     </Canvas>

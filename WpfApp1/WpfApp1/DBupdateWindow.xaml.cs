@@ -27,5 +27,6 @@ namespace WpfApp1
 		{
 			App.Current.MainWindow.IsEnabled = true;
 		}
+
 	}
 }

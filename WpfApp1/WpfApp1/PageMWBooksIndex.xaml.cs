@@ -64,6 +64,7 @@ namespace WpfApp1
 		private void BooksTable_MouseDoubleClick(object sender, MouseButtonEventArgs e)
 		{
 			DataRowView row = (DataRowView)BooksTable.SelectedItem;
+			if (BooksTable.SelectedItem == null) return; //If we clicked empty space, don't do this
 			string ISBN = row[0].ToString();
 
 			string copyQuery = "SELECT DISTINCT COP.BOOK_COPY_ID, B.TITLE, COP.CONDITION, " +

@@ -65,6 +65,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="PageAddCopy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageAddMember.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PageMWBooksIndex.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -87,6 +95,12 @@
     <Compile Include="PageAddBook.xaml.cs">
       <DependentUpon>PageAddBook.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PageAddCopy.xaml.cs">
+      <DependentUpon>PageAddCopy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageAddMember.xaml.cs">
+      <DependentUpon>PageAddMember.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PageMWBooksIndex.xaml.cs">
       <DependentUpon>PageMWBooksIndex.xaml</DependentUpon>
     </Compile>
@@ -98,10 +112,52 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="PageRemBook.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageRemCopy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageRemMember.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageUpdAddress.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageUpdCondition.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageUpdPhone.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="PageMWMemberLookup.xaml.cs">
       <DependentUpon>PageMWMemberLookup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageRemBook.xaml.cs">
+      <DependentUpon>PageRemBook.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageRemCopy.xaml.cs">
+      <DependentUpon>PageRemCopy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageRemMember.xaml.cs">
+      <DependentUpon>PageRemMember.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageUpdAddress.xaml.cs">
+      <DependentUpon>PageUpdAddress.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageUpdCondition.xaml.cs">
+      <DependentUpon>PageUpdCondition.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageUpdPhone.xaml.cs">
+      <DependentUpon>PageUpdPhone.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

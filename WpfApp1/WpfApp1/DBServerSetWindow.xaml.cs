@@ -16,8 +16,11 @@ namespace WpfApp1
 	/// <summary>
 	/// Interaction logic for DBServerSetWindow.xaml
 	/// </summary>
+	/// 
 	public partial class DBServerSetWindow : Window
 	{
+		bool textBoxFirstFocus = false;
+
 		public DBServerSetWindow()
 		{
 			InitializeComponent();
@@ -26,10 +29,6 @@ namespace WpfApp1
 		private void Window_Closed(object sender, EventArgs e)
 		{
 			App.Current.MainWindow.IsEnabled = true;
-			if (DBInterface.instance.validSetup() == true)
-			{
-				//App.Current.Resources["SQLsetup"] = true;
-			}
 		}
 
 		private void Cancel_Click(object sender, RoutedEventArgs e)
@@ -37,12 +36,13 @@ namespace WpfApp1
 			this.Close();
 		}
 
-		private void ok_Click(object sender, RoutedEventArgs e)
+		private void ok_PreviewMouseDown(object sender, MouseButtonEventArgs e)
 		{
 			ok.Content = "Connecting...";
-				//Shameless hack to make my nice loading text work:
-			App.Current.Dispatcher.Invoke(System.Windows.Threading.DispatcherPriority.Background, new Action(delegate { }));
-			
+		}
+
+		private void ok_Click(object sender, RoutedEventArgs e)
+		{
 			string inputName = inputBox.Text;
 			DBInterface setter = DBInterface.instance;
 			if (setter.setDBServer(inputName) == true)
@@ -62,15 +62,23 @@ namespace WpfApp1
 
 		private void inputBox_GotFocus(object sender, RoutedEventArgs e)
 		{
-			inputBox.Text = ""; //Clear default tip
-			inputBox.Foreground = Brushes.Black;
-
-			ok.IsEnabled = true; //Ok button is disabled until now to avoid setting the default input box filler text
+			if (textBoxFirstFocus == false) //Only do this once
+			{
+				textBoxFirstFocus = true;
+				inputBox.Text = ""; //Clear default tip
+				inputBox.Foreground = Brushes.Black;
+				ok.IsEnabled = true; //Ok button is disabled until now to avoid setting the default input box filler text
+			}
 		}
 
 		private void inputBox_KeyDown(object sender, KeyEventArgs e)
 		{
-			if (e.Key == Key.Enter) ok_Click(null, null); //Convenience
+			if (e.Key == Key.Enter)
+			{
+				//ok_Click(null, null); //this didn't work correctly
+			}
 		}
+
+
 	}
 }
