@@ -270,8 +270,6 @@ namespace WpfApp1
 
 				DBInterface.instance.DatabaseQuery(query);
 
-				MessageBox.Show("1");
-
 				string getDates = "SELECT CHECK_OUT_DATE, DUE_DATE FROM BOOK_CHECKOUT WHERE " +
 					"BOOK_COPY_ID = '" + copyID + "' AND MEM_ID = '" + memID + "'";
 				DataTable dates = DBInterface.instance.DatabaseQuery(getDates);
@@ -286,7 +284,9 @@ namespace WpfApp1
 				}
 
 				MessageBox.Show("Checked out: " + checkout + "\nDue: " + due, 
-					"Book Checkout", MessageBoxButton.OK, MessageBoxImage.Information);;
+					"Book Checkout", MessageBoxButton.OK, MessageBoxImage.Information);
+				memberInput.Text = "";
+				copyInput.Text = "";
 			}
 			else
 			{
@@ -318,7 +318,9 @@ namespace WpfApp1
 				DBInterface.instance.DatabaseQuery(query);
 
 				MessageBox.Show("Book copy " + copyID + " has been checked in and is recorded as available for use by other members.",
-					"Book Checkin", MessageBoxButton.OK, MessageBoxImage.Information); ;
+					"Book Checkin", MessageBoxButton.OK, MessageBoxImage.Information);
+				memberInput.Text = "";
+				copyInput.Text = "";
 			}
 		}
 	}

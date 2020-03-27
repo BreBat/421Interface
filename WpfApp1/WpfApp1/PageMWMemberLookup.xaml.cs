@@ -30,12 +30,12 @@ namespace WpfApp1
 			{
 				MembersTable.IsEnabled = true;
 				DataTable members = DBInterface.instance.DatabaseQuery("SELECT " +
-				"M.FNAME, M.MI, M.LNAME, B.TITLE, BCO.DUE_DATE, M.PHONE_NUM, M.ADDR, " +
+				"M.FNAME, M.MI, M.LNAME, B.TITLE, CAST(BCO.DUE_DATE AS varchar(10)), M.PHONE_NUM, M.ADDR, " +
 				"0.05 * DATEDIFF(DAY, BCO.DUE_DATE, GETDATE()) AS AMOUNT_DUE " +
 				"FROM MEMBER M, BOOK B, BOOK_CHECKOUT BCO, BOOK_COPY BC " +
 				"WHERE BCO.BOOK_COPY_ID = BC.BOOK_COPY_ID AND BC.ISBN = B.ISBN " +
 				"AND BCO.MEM_ID = M.MEM_ID AND DATEDIFF(DAY, BCO.DUE_DATE, GETDATE()) >= 1");
-
+				
 				members.Columns[0].ColumnName = "First Name";
 				members.Columns[1].ColumnName = "Initial";
 				members.Columns[2].ColumnName = "Last Name";

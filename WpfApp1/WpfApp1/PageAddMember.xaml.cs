@@ -49,27 +49,34 @@ namespace WpfApp1
 				phone = phone.Remove(badIndecies.Pop(), 1);
 			}
 
-			if (fName.Length == 0)
+			if (fName.Length == 0 || fnameFocus == false)
 			{
 				showInputWarning("First name is empty.");
 				return;
 			}
-
-			if (mName.Length == 0)
+			for (int i = fName.Length-1; i >= 0; i--)
 			{
-				showInputWarning("Middle initial is empty.");
-				return;
+				if (char.IsWhiteSpace(fName[i]) == true) fName = fName.Remove(i, 1);
 			}
-			if (mName.Length > 1)
+
+			if (mName.Length > 1 && mnameFocus == true)
 			{
 				showInputWarning("Middle initial may not be more than one letter long.");
 				return;
 			}
+			if (mName.Length == 0 || mnameFocus == false)
+			{
+				mName = "NULL";
+			}
 
-			if (lName.Length == 0)
+			if (lName.Length == 0 || lnameFocus == false)
 			{
 				showInputWarning("Last name is empty.");
 				return;
+			}
+			for (int i = lName.Length-1; i >= 0; i--)
+			{
+				if (char.IsWhiteSpace(lName[i]) == true) lName = lName.Remove(i, 1);
 			}
 
 			if (addr.Length == 0)
@@ -117,8 +124,6 @@ namespace WpfApp1
 
 			string query = "INSERT INTO MEMBER(FNAME, MI, LNAME, ADDR, PHONE_NUM) VALUES ('" +
 				fName + "','" + mName + "','" + lName + "','" + addr + "','" + phone + "')";
-
-			MessageBox.Show(query);
 
 			DBInterface.instance.DatabaseQuery(query);
 

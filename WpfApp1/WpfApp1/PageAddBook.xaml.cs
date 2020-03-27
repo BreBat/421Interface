@@ -91,32 +91,40 @@ namespace WpfApp1
 			}
 
 			///Title
-			if (title.Length == 0 || title.Length > 20)
+			if (title.Length == 0 || title.Length > 150)
 			{
-				showInputWarning("Title must be between 1-20 characters long.");
+				showInputWarning("Title must be between 1-150 characters long.");
 				return;
 			}
 
 			//First name
-			if (fName.Length == 0)
+			if (fName.Length == 0 || FNameFirstFocus == false)
 			{
 				showInputWarning("First name is empty.");
 				return;
 			}
+			for (int i = fName.Length - 1; i >= 0; i--)
+			{
+				if (char.IsWhiteSpace(fName[i]) == true) fName = fName.Remove(i, 1);
+			}
 
 			//Initial
-			if (mInit.Length > 1)
+			if (mInit.Length > 1 && MinitFirstFocus == true)
 			{
 				showInputWarning("Middle initial may not be more than one letter long.");
 				return;
 			}
-			if (mInit.Length == 0) mInit = "NULL";
+			if (mInit.Length == 0 || MinitFirstFocus == false) mInit = "NULL";
 
 			//Last name
-			if (lName.Length == 0)
+			if (lName.Length == 0 || LNameFirstFocus == false)
 			{
 				showInputWarning("Last name is empty.");
 				return;
+			}
+			for (int i = lName.Length - 1; i >= 0; i--)
+			{
+				if (char.IsWhiteSpace(lName[i]) == true) lName = lName.Remove(i, 1);
 			}
 
 			//Section
@@ -212,8 +220,12 @@ namespace WpfApp1
 			}
 
 			string update = "INSERT INTO BOOK(ISBN, TITLE, AUTH_FNAME, AUTH_LNAME, AUTH_MI, SECTION, CALL_NUM) " +
-					"VALUES('" + ISBN + "','" + title + "','" + fName + "','" + lName + "','" +
-								mInit + "','" + section + "'," + callNum + ")";
+					"VALUES('" + ISBN + "','" + title + "','" + fName + "','" + lName + "',";
+
+			if (mInit == "NULL") update += mInit + ",'";
+			else update += "'" + mInit + "','";
+
+			update += section + "'," + callNum + ")";
 
 			DBInterface.instance.DatabaseQuery(update);
 
